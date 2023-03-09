@@ -1,5 +1,3 @@
-"use strict";
-
 /**
  * @param {object[]} items
  * @excludes { Array< {k: string, v: any} >} excludes
@@ -11,7 +9,5 @@
  * @return {object[]}
  */
 function excludeItems(items, excludes) {
-    return items.filter(item => {
-        return excludes.every(ex => item[ex.k] !== ex.v);
-    });
+  return items.filter((item) => excludes.every((ex) => item[ex.k] !== ex.v));
 }

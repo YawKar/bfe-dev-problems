@@ -1,18 +1,13 @@
-const curry = (fn) => {
-    function curried(...args) {
-        if (args.length >= fn.length) {
-            return fn(...args);
-        } else {
-            return (...moreArgs) => curried(...args, ...moreArgs);
-        }
+const curry = (func) => {
+  function curried(...args) {
+    if (args.length >= func.length) {
+      return func(...args);
     }
-    return curried;
+    return (...moreArgs) => curried(...args, ...moreArgs);
+  }
+  return curried;
 };
 
 function fn(a, b, c) {
-    return `${a}_${b}_${c}`;
+  return `${a}_${b}_${c}`;
 }
-
-const curried = curry(fn);
-
-console.log(curried(54, 2, 1));

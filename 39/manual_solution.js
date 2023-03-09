@@ -1,20 +1,19 @@
-"use strict";
-
 /**
  * @param {integer} from
  * @param {integer} to
  */
 function range(from, to) {
+  let fromCounter = from;
   return {
     [Symbol.iterator]: () => ({
       next: () => {
-        let result = {
-          value: from > to ? undefined : from,
-          done: from > to
+        const result = {
+          value: fromCounter > to ? undefined : fromCounter,
+          done: fromCounter > to,
         };
-        from++;
+        fromCounter += 1;
         return result;
-      }
-    })
+      },
+    }),
   };
 }

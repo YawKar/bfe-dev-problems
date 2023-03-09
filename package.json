@@ -1,0 +1,26 @@
+{
+  "name": "bfe-dev-problems",
+  "version": "1.0.0",
+  "description": "solutions to problems from bigfrontend.dev",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint ./",
+    "lintfix": "eslint ./ --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YawKar/bfe-dev-problems.git"
+  },
+  "author": "YawKar",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/YawKar/bfe-dev-problems/issues"
+  },
+  "homepage": "https://github.com/YawKar/bfe-dev-problems#readme",
+  "devDependencies": {
+    "eslint": "^8.35.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5"
+  }
+}
